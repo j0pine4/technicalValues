@@ -1,0 +1,201 @@
+body{
+    background-color: #eeeeee;
+}
+
+.featured-grid{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(11, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    position: relative;
+    float: none;
+}
+
+nav ul li a{
+    color: black;
+  }  
+
+.brand-logo a{
+    color: black;
+}  
+
+#parallax{
+    filter: grayscale(60%)
+}
+
+.parallax-container{
+    margin-top: 100px;
+}
+
+#featured-box{
+    height: 200px;
+    border-radius: 5px;
+    background: none;
+    backdrop-filter: blur(8px);
+}
+
+#parallax-header{
+    padding-top: 20px;
+    
+}
+
+#main-container{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section>*{
+    margin: 0px;
+    padding: 30px;
+    }
+
+#item-one{
+        grid-column: 1 / 6;
+        grid-row: 1 / 12;
+        background: white;
+        background-image: url('/static/shopper/img/desk.jpg');
+        background-repeat: no-repeat;
+        background-size: 50vw;
+        background-position: center bottom;
+        
+    }
+
+#item-two{
+        grid-column: 6 / 12;
+        grid-row: 1 / 6;
+        background-image: url('/static/shopper/img/yellowDesk.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        
+    }
+
+#item-three{
+        grid-column: 6 / 12;
+        grid-row: 6 / 12;
+        background-image: url('/static/shopper/img/mac.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+#products{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-bar{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card CSS */
+.card-image{
+    padding: 10px
+}
+
+#featured-top{
+    background: none;
+}
+
+#icons{
+    background: white;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+#grid-products-container>*{
+    background-color: white;
+}
+
+#grid-products-container{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+#product-01{
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;    
+    background-image: url('https://m.media-amazon.com/images/I/71cNd+SKqUL.jpg');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#product-02{
+    grid-column: 4 / 8;
+    grid-row: 1 / 2;    
+}
+
+#product-03{
+    grid-column: 8 / 13;
+    grid-row: 1 / 2;   
+}
+
+#product-04{
+    grid-column: 4 / 13;
+    grid-row: 2 / 4;    
+}
+
+#products-list01-wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+/* Breadcrumbs */
+
+.breadcrumb:before {
+    color: #333 !important;
+}
+
+.breadcrumb, .breadcrumb:last-child {
+    color: #333 !important;
+ }
+
+#backdrop{
+    display: flex;
+    background-image: url("img/mac.jpg") ;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+#product-body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 20vh;
+    background-color: rgb(255, 255, 255);
+    width: 80vw;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+#suggested-products{
+    padding-top: 5vh;
+}
+
+#hot-products{
+    display: flex;
+    align-items: flex-end;
+}
+
+.hot-products{
+    display: flex;
+    align-items: flex-end;
+}
+
+.tabs{
+    margin-bottom: 50px;
+}
