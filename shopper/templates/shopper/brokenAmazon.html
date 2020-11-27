@@ -50,10 +50,10 @@
 
             <!-- First Row -->
             <div class="row"> 
-                <div class="col m6">
+                <div class="col">
 
                     <div class="card z-depth-2">
-                        <div class="card-content">
+                        <div class="card-content" id=amazon_lib>
 
                             <div class="row">
                                 <form id="search-bar">
@@ -69,35 +69,43 @@
                             <script type="text/javascript">
                                 var search = 'laptop'
 
-    
 
                                 const searchForm = document.forms['search-bar'];
 
                                 searchForm.addEventListener('submit', function(e){
+                                                                     
+                                    amzn_assoc_tracking_id = "j0pine4-20";
+                                    amzn_assoc_placement = "adunit0";
+                                    amzn_assoc_ad_mode = "search";
+                                    amzn_assoc_ad_type = "smart";
+                                    amzn_assoc_marketplace = "amazon";
+                                    amzn_assoc_region = "US";
+                                    amzn_assoc_default_search_phrase = search;
+                                    amzn_assoc_default_category = "All";
+                                    amzn_assoc_linkid = "07377143162e69c38e48440c17c0e6ea";
+                                    amzn_assoc_search_bar = "false";
+                                    amzn_assoc_search_bar_position = "top";
+                                    amzn_assoc_title = "";
+                                    amzn_assoc_div_name = "amazon_content"
 
                                     e.preventDefault();
                                     const value = searchForm.querySelector('input[type="text"]').value;
                                     console.log(value);
-                         
+                                    amzn_assoc_default_search_phrase = value;
+                                    //Remove amazon library if it exists
+                                    var tempEl = document.getElementById('amazon_lib_script')
+                                    if (tempEl) tempEl.remove()
 
+                                    // Create and append new script element
+                                    var amazon_script_el = document.createElement('script')
+                                    amazon_script_el.src = '//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US#'+(Math.random(2)*100)
+                                    amazon_script_el.id = 'amazon_lib_script'
+                                    document.getElementById('amazon_lib').appendChild(amazon_script_el)
                                 });
-                                                                     
-                                amzn_assoc_placement = "adunit0";
-                                amzn_assoc_tracking_id = "j0pine4-20";
-                                amzn_assoc_ad_mode = "search";
-                                amzn_assoc_ad_type = "smart";
-                                amzn_assoc_marketplace = "amazon";
-                                amzn_assoc_region = "US";
-                                amzn_assoc_default_search_phrase = search;
-                                amzn_assoc_default_category = "All";
-                                amzn_assoc_linkid = "07377143162e69c38e48440c17c0e6ea";
-                                amzn_assoc_search_bar = "false";
-                                amzn_assoc_search_bar_position = "top";
-                                amzn_assoc_title = "";
 
                             </script>
 
-                            <script  src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"> </script>
+                            <div id=amazon_content> </div>
                         </div>
                     </div>
                 

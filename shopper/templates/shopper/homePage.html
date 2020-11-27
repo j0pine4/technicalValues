@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!doctype html>
@@ -14,7 +13,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  
-    <link rel="stylesheet" href="/static/shopper/css/index.css">
+    <link rel="stylesheet" href="{% static 'shopper/css/index.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Technical Values</title>
     
@@ -39,31 +38,76 @@
     <div class="center-align container">
         <h6> <strong> Featured </strong> </h6>
         <h3> Search for stuff here ya'll </h3>
-        <p class="flow-text"> This is just a temporary site, made to simplify the amazon link process for you guys. It's real ugly buuuuut it gets the job done. (Kinda sorta) </p>
+        <p class="flow-text"> This is just a temporary site, made to simplify the amazon link process for you guys. No, this is not the final look of the website I am designing. </p>
     </div>
 
     <!-- Temporary Stuff -->
         <div class="container">
 
-            <div class="card z-depth-3">
-                <div class="card-content">
-                    <script type="text/javascript">
-                        amzn_assoc_placement = "adunit0";
-                        amzn_assoc_tracking_id = "j0pine4-20";
-                        amzn_assoc_ad_mode = "search";
-                        amzn_assoc_ad_type = "smart";
-                        amzn_assoc_marketplace = "amazon";
-                        amzn_assoc_region = "US";
-                        amzn_assoc_default_search_phrase = "xbox";
-                        amzn_assoc_default_category = "All";
-                        amzn_assoc_linkid = "07377143162e69c38e48440c17c0e6ea";
-                        amzn_assoc_search_bar = "true";
-                        amzn_assoc_search_bar_position = "top";
-                        amzn_assoc_title = "";
-                    </script>
-                    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+            <!-- First Row -->
+            <div class="row"> 
+                <div class="col s12">
+
+                    <div class="card z-depth-2">
+                        <div class="card-content" id=amazon_lib>
+
+                            <div class="row">
+                                <form id="search-bar">
+                                    <div class="col s10"> 
+                                        <input type="text" class="input-field" placeholder="Search">
+                                    </div>
+                                    <div class="col s2 "> 
+                                        <button type="submit" class="searchBtn btn-floating btn waves-effect waves-light pulse blue z-depth-2"><i class="material-icons">search</i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <script type="text/javascript">
+                                var search = 'laptop'
+
+
+                                const searchForm = document.forms['search-bar'];
+
+                                searchForm.addEventListener('submit', function(e){
+                                                                     
+                                    amzn_assoc_tracking_id = "j0pine4-20";
+                                    amzn_assoc_placement = "adunit0";
+                                    amzn_assoc_ad_mode = "search";
+                                    amzn_assoc_ad_type = "smart";
+                                    amzn_assoc_marketplace = "amazon";
+                                    amzn_assoc_region = "US";
+                                    amzn_assoc_default_search_phrase = search;
+                                    amzn_assoc_default_category = "All";
+                                    amzn_assoc_linkid = "07377143162e69c38e48440c17c0e6ea";
+                                    amzn_assoc_search_bar = "false";
+                                    amzn_assoc_search_bar_position = "top";
+                                    amzn_assoc_title = "";
+                                    amzn_assoc_div_name = "amazon_content"
+
+                                    e.preventDefault();
+                                    const value = searchForm.querySelector('input[type="text"]').value;
+                                    console.log(value);
+                                    amzn_assoc_default_search_phrase = value;
+                                    //Remove amazon library if it exists
+                                    var tempEl = document.getElementById('amazon_lib_script')
+                                    if (tempEl) tempEl.remove()
+
+                                    // Create and append new script element
+                                    var amazon_script_el = document.createElement('script')
+                                    amazon_script_el.src = '//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US#'+(Math.random(2)*100)
+                                    amazon_script_el.id = 'amazon_lib_script'
+                                    document.getElementById('amazon_lib').appendChild(amazon_script_el)
+                                });
+
+                            </script>
+
+                            <div id=amazon_content> </div>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
+
 
         </div>
 
