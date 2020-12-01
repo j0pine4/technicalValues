@@ -33,6 +33,42 @@
 
     <br>
 
+    <div class="wrapper" >
+        <!-- Contain the upper section -->
+        <section class="featured-grid z-depth-3 hide-on-small-only">
+
+            <!-- Featured Item 01 -->
+            <div id="item-one" class=""> 
+                <div class="container left">
+                    <h3 class="blue-text text-darken-4"> Find the Lowest Prices </h3>
+                    <p class="flow-text"> Search using Amazons tools </p>
+                </div>
+            
+            </div>
+
+
+            <!-- Featured Item 02 -->
+            <div id="item-two" class="">  
+                <div class="container ">
+                    <h3 class="blue-text text-darken-4"> Quality Guarenteed </h3>
+                    <p class="flow-text"> Find the best products based on your search </p>
+                </div>
+            </div>
+
+            <!-- Featured Item 03 -->
+            <div id="item-three" class="" >  
+                <div class="container white-text ">
+                    <h3 class="" > No Email Required </h3>
+                    <p class="flow-text"> As an Amazon Associate I earn from qualifying purchases. </p>
+                </div>
+            </div>
+            
+        </section>
+
+
+
+    </div>
+
 
     <!-- Grid Layout Products -->
     <div class="center-align container">
@@ -66,7 +102,7 @@
                                 var search = 'laptop'
 
 
-                                const searchForm = document.forms['search-bar'];
+                                var searchForm = document.forms['search-bar'];
 
                                 searchForm.addEventListener('submit', function(e){
                                                                      
@@ -104,12 +140,101 @@
                             <div id=amazon_content> </div>
                         </div>
                     </div>
-                
                 </div>
             </div>
 
+        </div>
+
+    <!-- Categories Icons -->
+    <div class="z-depth-3" id="icons">
+
+        <br>
+
+        <div class="center-align">
+            <h6> <strong> Hot Products </strong> </h6>
+            <h3> Get the best deals on the best Tech </h3>
+            <p class="flow-text grey-text"> Make sure you're not overpaying on todays best items </p>
+        </div>
+
+        <div class="container">
+
+        <div class="row center-align" id="hot-products">
+
+            <div class="col s12 m3 center-align">
+                <a href="https://amzn.to/2VpuEWU">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/619BkvKW35L._SL1500_.jpg" alt="" class="responsive-img">
+                </a>
+                <hr>
+                <p> Sony Playstation 5 </p>
+            </div>
+
+            <div class="col s12 m3 center-align">
+                <a href="https://amzn.to/3lnoa5e">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71BMVOs2xML._AC_SL1500_.jpg" alt="" class="responsive-img">
+                </a>
+                <hr>
+                <p> Macbook Air Pro </p>
+            </div>
+
+            <div class="col s12 m3 center-align">
+                <a href="https://amzn.to/37toDhp">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61Q2hRo4BCL._SL1200_.jpg" alt="" class="responsive-img">
+                </a>
+                <hr>
+                <p> Xbox Series S </p>
+            </div>
+
+            <div class="col s12 m3 center-align">
+                <a href="https://amzn.to/36qx1ib">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61F0MXKMLwL._AC_SL1080_.jpg" alt="" class="responsive-img">
+                </a>
+                <hr>
+                <p> Sony A8H OLED 4K Ultra TV </p>
+            </div>
+        
+        </div>
 
         </div>
+
+    </div>
+
+    <!-- Headphones Section -->
+    <div class="container">
+
+        <div class="center-align">
+            <h6> <strong> Listen Up! </strong> </h6>
+            <h3> Check out these awesome headphones </h3>
+            <p class="flow-text grey-text"> Make sure you're not overpaying on todays best items </p>
+        </div>
+
+        <div class="row valign-wrapper" id="headphone-section">
+
+            <!-- Left Column -->
+            <div class="col m6">
+                <a href="https://amzn.to/3oiLh2R">
+                    <img src="{% static 'shopper/img/beatsPro.png' %}" class="responsive-img">
+                </a>
+            </div>
+            <!-- End of Column -->
+            
+            <!-- Left Column -->
+            <div class="col m6">
+                <ul class="">
+                    <li class=""> This pre-owned product has been professionally inspected, tested and cleaned by Amazon-qualified suppliers. </li>
+                    <hr>
+                    <li class=""> Pair and play with your Bluetooth device with 30ft range. </li>
+                    <hr>
+                    <li class=""> 12-Hour rechargeable battery with Fuel gauge. Soft over ear cushions for extended comfort and added noise isolation </li>
+                    <hr>
+                    <li class=""> Soft ear cups have an ergonomic bellow that creates a flexible custom fit, so you can keep your music all to yourself. </li>
+                    <hr>
+                </ul>
+            </div>
+            <!-- End of Column -->
+
+        </div>
+
+    </div>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
